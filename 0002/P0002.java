@@ -5,9 +5,21 @@
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  */
 
-public final class P0001 {
+public final class P0002 {
 
     public static void main(final String[] args) {
-        //TBD
+        long previousNumber = 0;
+        long currentNumber = 1;
+        long fibonacciNumber = 0;
+        long sumOfEvenFibonacci = 0;
+        for(; fibonacciNumber < 4000000; ) {
+            fibonacciNumber = currentNumber + previousNumber;
+            previousNumber = currentNumber;
+            currentNumber = fibonacciNumber;
+            if(fibonacciNumber % 2 == 0) {
+                sumOfEvenFibonacci += fibonacciNumber;
+            }
+        }
+        System.out.println("Answer for P0002: " + sumOfEvenFibonacci);
     }
 }
