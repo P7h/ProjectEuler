@@ -7,6 +7,17 @@
 public final class P0003 {
 
     public static void main(final String[] args) {
-        //TBD
+        long number = 600851475143L;
+        long primeFactor = 1L;
+        for (long i = 3L; i < number; i += 2) {
+            if (number % i == 0) {
+                primeFactor = i;
+                number /= i;
+            }
+        }
+        if(number > primeFactor) { 
+            primeFactor = number;
+        }
+        System.out.println(primeFactor);
     }
 }
