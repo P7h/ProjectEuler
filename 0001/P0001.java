@@ -9,7 +9,7 @@ public final class P0001 {
     public static void main(final String[] args) {
         final long min = 0L;
         final long max = 1000L;
-        final long answer = 0L;
+        long answer = 0L;
         for (long i = min; i < max; i++) {
             if (i % 3 == 0 || i % 5 == 0)
                 answer += i;
